@@ -1,6 +1,6 @@
 import scala.collection.*
 
-val Delimiter = "   "
+val ThreeSpacesDelimiter = "   "
 
 object day1 
 {
@@ -28,11 +28,10 @@ object day1
         val rightBuffer = new mutable.ListBuffer[Int]
         try 
         {
-            // Part 1: Difference score
             val lineIterator = source.getLines()
             for (line <- lineIterator)
             {
-                val parts = line.split(Delimiter)
+                val parts = line.split(ThreeSpacesDelimiter)
                 
                 val leftValue = parts(0)
                 leftBuffer.addOne(leftValue.toInt)
